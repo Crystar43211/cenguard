@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Règles de confidentialité — CENGuard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%237c5cff%27/%3E%3C/svg%3E" />
+  <style>
+    :root { --bg: #0b0d12; --surface: #161a23; --border: #262c3a; --text: #eef0f5; --text-2: #a7aec0; --text-3: #6c7488; --accent: #8f74ff; color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 'Segoe UI', system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 20px 40px; }
+    .back { display: inline-flex; align-items: center; gap: 10px; color: var(--text-2); text-decoration: none; font-weight: 600; }
+    .back .logo { width: 28px; height: 28px; }
+    h1 { margin: 26px 0 4px; font-size: 30px; letter-spacing: -0.02em; }
+    .updated { margin: 0; color: var(--text-3); font-size: 14px; }
+    h2 { margin: 36px 0 10px; font-size: 19px; }
+    p, li { color: var(--text-2); }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+    strong { color: var(--text); }
+    code { font-family: Consolas, monospace; font-size: 14px; color: var(--text); }
+    table { width: 100%; border-collapse: collapse; margin: 6px 0; font-size: 15px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { color: var(--text); font-weight: 600; }
+    td { color: var(--text-2); }
+    a { color: var(--accent); }
+    footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="./"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1c1630"/><path d="M32 10 14 17v13c0 11 7.6 19.5 18 23 10.4-3.5 18-12 18-23V17z" fill="#7c5cff"/><path d="M38.5 26.5a8 8 0 1 0 0 11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>CENGuard</a>
+    <h1>Règles de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : 27 octobre 2026</p>
+
+    <p>CENGuard est une application Windows gratuite qui garde vos mots de passe, codes 2FA, notes et fichiers dans un coffre chiffré. Cette page explique quelles données elle utilise et ce qu'elle en fait.</p>
+
+    <h2>En bref</h2>
+    <ul>
+      <li>CENGuard n'a <strong>aucun serveur</strong>. Vos données vont uniquement de votre PC à votre propre Google Drive.</li>
+      <li>Le contenu du coffre est <strong>chiffré sur votre PC</strong> (AES-256) avec une clé protégée par votre mot de passe maître. Ni Google, ni le développeur ne peuvent le lire.</li>
+      <li>Aucune publicité, aucune statistique d'utilisation, aucune revente ni transmission de données à qui que ce soit.</li>
+    </ul>
+
+    <h2>Accès demandés à votre compte Google</h2>
+    <table>
+      <tr><th>Accès</th><th>Utilisation</th></tr>
+      <tr><td>Adresse e-mail (<code>openid</code>, <code>email</code>)</td><td>Afficher le compte connecté dans CENGuard.</td></tr>
+      <tr><td>Données de configuration de l'application dans Google Drive (<code>drive.appdata</code>)</td><td>Ranger le coffre chiffré dans l'espace caché que Google Drive réserve à CENGuard. Cet espace n'apparaît pas dans Drive et aucune autre application n'y a accès.</td></tr>
+      <tr><td>Fichiers Drive créés ou ouverts avec CENGuard (<code>drive.file</code>)</td><td>Créer le dossier « CENGuard - échanges » qui sert aux envois entre amis, et relire les fichiers créés par les anciennes versions de CENGuard pour les importer. CENGuard ne voit pas vos autres fichiers Drive.</td></tr>
+    </table>
+    <p>L'utilisation et le transfert des informations reçues des API Google respectent le <a href="https://developers.google.com/terms/api-services-user-data-policy">Règlement sur les données utilisateur des services d'API Google</a>, y compris les exigences d'utilisation limitée (Limited Use).</p>
+
+    <h2>Données enregistrées sur votre PC</h2>
+    <ul>
+      <li>Le jeton de connexion Google, chiffré par Windows pour votre session.</li>
+      <li>Un identifiant aléatoire de l'installation et les réglages propres à ce PC.</li>
+    </ul>
+    <p>Le coffre lui-même n'est pas écrit sur le disque : il est téléchargé à l'ouverture et gardé en mémoire.</p>
+
+    <h2>Envois entre amis</h2>
+    <p>Quand vous envoyez des fichiers à un ami, ils passent directement de PC à PC s'il est sur le même réseau. Sinon, ils sont déposés chiffrés dans le dossier « CENGuard - échanges » de votre Drive, partagé par lien, puis effacés après réception. Seul l'ami à qui vous les avez envoyés peut les déchiffrer. Une demande sans réponse expire au bout de 30 jours.</p>
+
+    <h2>Supprimer vos données</h2>
+    <ul>
+      <li>Dans CENGuard : <strong>Réglages › Se déconnecter</strong> retire l'accès de CENGuard à votre compte Google.</li>
+      <li>À tout moment, depuis Google : <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>, puis CENGuard, puis supprimer l'accès.</li>
+      <li>Pour effacer le coffre stocké dans Drive : drive.google.com › Paramètres › Gérer les applications › CENGuard › Options › <strong>Supprimer les données d'application masquées</strong>.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Pour toute question, écrivez à l'adresse d'assistance affichée sur l'écran de connexion Google de CENGuard.</p>
+
+    <footer>CENGuard · <a href="./">Accueil</a></footer>
+  </main>
+</body>
+</html>
