@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CENGuard</title>
+  <meta name="description" content="CENGuard, coffre-fort chiffré pour Windows : mots de passe, codes 2FA, notes et fichiers, synchronisés dans l'espace caché de votre Google Drive." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%237c5cff%27/%3E%3C/svg%3E" />
+  <style>
+    :root { --bg: #0b0d12; --surface: #161a23; --border: #262c3a; --text: #eef0f5; --text-2: #a7aec0; --text-3: #6c7488; --accent: #8f74ff; color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 'Segoe UI', system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 20px 40px; }
+    .hero { display: flex; align-items: center; gap: 18px; }
+    .hero .logo { width: 72px; height: 72px; flex: none; }
+    h1 { margin: 0; font-size: 34px; letter-spacing: -0.02em; }
+    .tagline { margin: 4px 0 0; color: var(--text-2); }
+    h2 { margin: 44px 0 14px; font-size: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    .card { padding: 16px 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border); }
+    .card strong { display: block; margin-bottom: 4px; }
+    .card span { color: var(--text-2); font-size: 14.5px; }
+    ul { padding-left: 20px; color: var(--text-2); }
+    li { margin: 6px 0; }
+    li strong { color: var(--text); }
+    a { color: var(--accent); }
+    footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; display: flex; gap: 18px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1c1630"/><path d="M32 10 14 17v13c0 11 7.6 19.5 18 23 10.4-3.5 18-12 18-23V17z" fill="#7c5cff"/><path d="M38.5 26.5a8 8 0 1 0 0 11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>
+      <div>
+        <h1>CENGuard</h1>
+        <p class="tagline">Coffre-fort chiffré pour Windows : mots de passe, codes 2FA, notes et fichiers.</p>
+      </div>
+    </div>
+
+    <h2>Ce que fait CENGuard</h2>
+    <div class="grid">
+      <div class="card"><strong>Mots de passe et 2FA</strong><span>Identifiants, mots de passe et codes de vérification en 2 étapes au même endroit.</span></div>
+      <div class="card"><strong>Notes et fichiers</strong><span>Notes privées et fichiers importés dans le coffre, dossiers compris.</span></div>
+      <div class="card"><strong>Synchronisé entre vos PC</strong><span>Connectez le même compte Google sur vos PC : ils partagent le même coffre.</span></div>
+      <div class="card"><strong>Envois entre amis</strong><span>Envoyez des fichiers à un ami grâce à son code ami. Il accepte, et tout arrive dans son coffre.</span></div>
+    </div>
+
+    <h2>Votre compte Google</h2>
+    <ul>
+      <li>Le coffre est rangé dans <strong>l'espace caché</strong> que Google Drive réserve à chaque application : il n'apparaît ni dans Drive, ni sur vos PC.</li>
+      <li>Tout est <strong>chiffré sur votre PC</strong> avec votre mot de passe maître avant d'être envoyé. Ni Google, ni le développeur de CENGuard ne peuvent le lire.</li>
+      <li>CENGuard n'a <strong>aucun serveur</strong> : vos données vont seulement de votre PC à votre propre Google Drive.</li>
+      <li>CENGuard ne voit pas vos autres fichiers Drive : il n'a accès qu'à ce qu'il a créé lui-même.</li>
+    </ul>
+
+    <footer>
+      <a href="confidentialite.html">Règles de confidentialité</a>
+      <span>CENGuard est une application gratuite et personnelle.</span>
+    </footer>
+  </main>
+</body>
+</html>
